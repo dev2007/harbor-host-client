@@ -4,12 +4,15 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start":"electron ."
+    "start": "electron ."
   },
   "keywords": [],
   "author": "awu",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "electron": "^11.0.2"
+  },
+  "dependencies": {
+    "bulma": "^0.9.3"
   }
 }

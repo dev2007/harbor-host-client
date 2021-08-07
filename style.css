@@ -1,0 +1,123 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  font-family: '微软雅黑', Trebuchet MS, Verdana, Helvetica, Arial, sans-serif;
+}
+
+.display {
+  display: flex;
+  height: 100vh;
+  background: #336699;
+}
+
+aside {
+  flex: 0 0 110px;
+  width: 110px;
+  background: #336699;
+  color: #FFF;
+  text-align: center;
+  transition: 0.2s ease-out;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 0;
+  margin: 6px;
+}
+
+a:hover{
+  color: #0099cc;
+}
+
+.copyright > a {
+  color: #FFF;
+  font-size: 15px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.menu {
+  text-align: left;
+  margin: 36px 0 0 8px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: '微软雅黑', Trebuchet MS, Verdana, Helvetica, Arial, sans-serif;
+}
+
+.menu li {
+  list-style-type: circle;
+  list-style-position: inside;
+}
+
+.menu li:hover {
+  cursor: pointer;
+  color: #0099cc;
+}
+
+#menuVisible{
+  display: none;
+}
+
+#menuVisible:checked~aside{
+  display: none;
+}
+
+.vText {
+  writing-mode: tb-rl;
+  visibility: hidden;
+}
+
+#menuVisible:checked~.vText{
+  visibility:visible;
+}
+
+
+.wrap {
+  float: left;
+  background: #336699;
+  border-radius: 50px;
+  color: #FFF;
+  cursor: pointer;
+  display: block;
+  font-family: Courier New;
+  font-size: 25px;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  line-height: 35px;
+  text-align: center;
+  text-shadow: 0 -4px;
+}
+
+.wrap:hover{
+  background-color: #0099cc;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+main {
+  flex: 1;
+  padding: 2px 0 0 6px;
+  background: #FFF;
+}
+
+main>header {
+  text-align: left;
+  margin-left: 10px;
+}
+
+.menuName {
+  color: #336699;
+  font-weight: bold;
+  text-shadow: 5px 2px 2px lightgray;
+}
+
+.menuName:hover{
+  color: #0099cc;
+}
+
+main>section {
+  text-align: left;
+  border: 1px solid red;
+}

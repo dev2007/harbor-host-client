@@ -1,11 +1,49 @@
-<OCTYPE html>
-  <html>
-  <head>
-      <meta charset="UTF-8">
-      <title>Hello World!</title>
-      <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
-  </head>
-  <body>
-      <h1>Hello World！</h1>
-  </body>
-  </html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MorTnon Harbor</title>
+    <link rel="icon" href="res/logo.ico">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <style type="text/css">
+        ::-webkit-scrollbar {
+            display: none;
+
+        }
+    </style>
+    <style type="text/css">
+        @import url("node_modules/bulma/css/bulma.min.css");
+    </style>
+</head>
+
+<body>
+    <div class="display">
+        <input type="checkbox" id="menuVisible">
+        <label class="wrap" for="menuVisible">=</label>
+        <header class="copyright vText"><a href="https://mortnon.fun" target="_blank">&copy; MorTnon</a></header>
+        <aside>
+            <section class="menu">
+                <ul>
+                    <li>上传</li>
+                    <li>配置</li>
+                    <li>帮助</li>
+                </ul>
+            </section>
+            <footer class="copyright"><a href="https://mortnon.fun" target="_blank">&copy; MorTnon</a></footer>
+        </aside>
+        <main>
+            <header>
+                <a class="menuName">{{菜单名}}</a>
+            </header>
+
+            <section>
+                <a style="color: #666666;">color2</a>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

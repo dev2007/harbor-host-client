@@ -1,19 +1,30 @@
-const { app, BrowserWindow } = require('electron')
-
-function createWindow () {
+const { app, Menu, BrowserWindow,shell } = require('electron')
+//主窗体构建
+function createMainWindow() {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
-      nodeIntegration: true
-    }
+      nodeIntegration: true,
+      contextIsolation: false
+    },
+    title: "MorTnon Harbor",
+    menuBarVisible:false,
+    minWidth: 800,
+    minHeight: 600
   })
 
   win.loadFile('index.html')
-  // win.webContents.openDevTools()
+  win.removeMenu()
+
+  win.webContents.on('new-window', function(e, url) {
+    e.preventDefault();
+    shell.openExternal(url);
+  });
 }
 
-app.whenReady().then(createWindow)
+//应用相关
+app.whenReady().then(createMainWindow)
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
