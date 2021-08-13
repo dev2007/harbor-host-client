@@ -20,6 +20,19 @@ aside {
   transition: 0.2s ease-out;
 }
 
+.menuIcon {
+  position:absolute;
+  top: 0;
+  margin: 40px 0 0 4px;
+  color: #FFF;
+  visibility: hidden;
+}
+
+.menuIcon li:hover {
+  cursor: pointer;
+  color: #0099cc;
+}
+
 .copyright {
   position: absolute;
   bottom: 0;
@@ -39,21 +52,34 @@ a:hover{
 
 .menu {
   text-align: left;
-  margin: 36px 0 0 8px;
-  font-size: 25px;
+  margin: 40px 0 0 8px;
+  font-size: 20px;
   font-weight: bold;
   font-family: '微软雅黑', Trebuchet MS, Verdana, Helvetica, Arial, sans-serif;
 }
 
-.menu li {
-  list-style-type: circle;
-  list-style-position: inside;
+.menu > ul,.menuIcon > ul {
+  list-style-type:none;
+  padding-left: 0;
+}
+
+.menu ul > li {
+  padding: 4px;
+}
+
+.menu li > i {
+  padding-right: 6px;
+}
+
+.menu li > a {
+  color: #FFF;
 }
 
 .menu li:hover {
   cursor: pointer;
-  color: #0099cc;
+  text-shadow: 4px 2px 2px #999999;
 }
+
 
 #menuVisible{
   display: none;
@@ -69,6 +95,10 @@ a:hover{
 }
 
 #menuVisible:checked~.vText{
+  visibility:visible;
+}
+
+#menuVisible:checked~.menuIcon{
   visibility:visible;
 }
 

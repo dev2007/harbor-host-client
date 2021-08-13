@@ -14,8 +14,7 @@ function createMainWindow() {
     minHeight: 600
   })
 
-  win.loadFile('index.html')
-  win.removeMenu()
+  win.loadURL(`file://${app.getAppPath()}/index.html`)
 
   win.webContents.on('new-window', function(e, url) {
     e.preventDefault();
@@ -24,7 +23,11 @@ function createMainWindow() {
 }
 
 //应用相关
-app.whenReady().then(createMainWindow)
+// app.whenReady().then(createMainWindow)
+
+app.on('ready', () => {
+  createMainWindow()
+});
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {

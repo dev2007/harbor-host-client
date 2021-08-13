@@ -2,17 +2,53 @@
   "name": "harbor-host",
   "version": "1.0.0",
   "description": "",
+  "author": "卯榫 mortise-and-tenon",
+  "license": "MIT",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
   },
   "keywords": [],
-  "author": "awu",
-  "license": "MIT",
   "devDependencies": {
     "electron": "^11.0.2"
   },
   "dependencies": {
-    "bulma": "^0.9.3"
+    "bulma": "^0.9.3",
+    "electron-package": "^0.1.0",
+    "electron-packager": "^12.1.0",
+    "electron-updater": "^4.0.0"
+  },
+  "build": {
+    "electronVersion": "1.8.4",
+    "win": {
+      "requestedExecutionLevel": "highestAvailable",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "static/logo.ico"
+    },
+    "productName": "卯榫图床",
+    "appId": "卯榫图床",
+    "artifactName": "Monrtnon-Harbor-${version}-${arch}.${ext}",
+    "nsis": {
+      "artifactName": "Monrtnon-Harbor-${version}-${arch}.${ext}"
+    },
+    "extraResources": [
+      {
+        "from": "./static/xxxx/",
+        "to": "app-server",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
   }
 }

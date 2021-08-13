@@ -7,29 +7,36 @@
     <title>MorTnon Harbor</title>
     <link rel="icon" href="res/logo.ico">
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
-    <link type="text/css" rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="static/css/style.css">
     <style type="text/css">
         ::-webkit-scrollbar {
             display: none;
-
         }
     </style>
-    <style type="text/css">
-        @import url("node_modules/bulma/css/bulma.min.css");
-    </style>
+    <link type="text/css" rel="stylesheet" href="static/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="static/css/bulma.min.css">
 </head>
 
 <body>
     <div class="display">
         <input type="checkbox" id="menuVisible">
         <label class="wrap" for="menuVisible">=</label>
+        <header class="menuIcon">
+            <ul>
+                <li title="上传"><i class="fa fa-cloud-upload fa-fw"></i></li>
+                <li title="管理 "><i class="fa fa-book fa-fw"></i></li>
+                <li title="配置"><i class="fa fa-cog fa-fw"></i></li>
+                <li title="帮助"><i class="fa fa-question fa-fw"></i></li>
+            </ul>
+        </header>
         <header class="copyright vText"><a href="https://mortnon.fun" target="_blank">&copy; MorTnon</a></header>
         <aside>
             <section class="menu">
                 <ul>
-                    <li>上传</li>
-                    <li>配置</li>
-                    <li>帮助</li>
+                    <li><i class="fa fa-cloud-upload fa-fw"></i><a>上传</a></li>
+                    <li><i class="fa fa-book fa-fw"></i><a>管理</a></li>
+                    <li><i class="fa fa-cog fa-fw"></i><a>配置</a></li>
+                    <li><i class="fa fa-question fa-fw"></i><a>帮助</a></li>
                 </ul>
             </section>
             <footer class="copyright"><a href="https://mortnon.fun" target="_blank">&copy; MorTnon</a></footer>
