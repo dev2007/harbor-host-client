@@ -15,39 +15,60 @@
     </style>
     <link type="text/css" rel="stylesheet" href="static/css/font-awesome.min.css">
     <link type="text/css" rel="stylesheet" href="static/css/bulma.min.css">
+    <script src="static/javascript/index.js"></script>
 </head>
 
 <body>
-    <div class="display">
+    <div class="display" id="app">
         <input type="checkbox" id="menuVisible">
         <label class="wrap" for="menuVisible">=</label>
         <header class="menuIcon">
             <ul>
-                <li title="上传"><i class="fa fa-cloud-upload fa-fw"></i></li>
-                <li title="管理 "><i class="fa fa-book fa-fw"></i></li>
-                <li title="配置"><i class="fa fa-cog fa-fw"></i></li>
-                <li title="帮助"><i class="fa fa-question fa-fw"></i></li>
+                <li title="上传" value="0"><i class="fa fa-cloud-upload fa-fw"></i></li>
+                <li title="管理" value="1"><i class="fa fa-book fa-fw"></i></li>
+                <li title="配置" value="2"><i class="fa fa-cog fa-fw"></i></li>
+                <li title="帮助" value="3"><i class="fa fa-question fa-fw"></i></li>
             </ul>
         </header>
         <header class="copyright vText"><a href="https://mortnon.fun" target="_blank">&copy; MorTnon</a></header>
         <aside>
             <section class="menu">
                 <ul>
-                    <li><i class="fa fa-cloud-upload fa-fw"></i><a>上传</a></li>
-                    <li><i class="fa fa-book fa-fw"></i><a>管理</a></li>
-                    <li><i class="fa fa-cog fa-fw"></i><a>配置</a></li>
-                    <li><i class="fa fa-question fa-fw"></i><a>帮助</a></li>
+                    <li title="上传" value="0"><i class="fa fa-cloud-upload fa-fw"></i>上传</li>
+                    <li title="管理" value="1"><i class="fa fa-book fa-fw"></i>管理</li>
+                    <li title="配置" value="2"><i class="fa fa-cog fa-fw"></i>配置</li>
+                    <li title="帮助" value="3"><i class="fa fa-question fa-fw"></i>帮助</li>
                 </ul>
             </section>
             <footer class="copyright"><a href="https://mortnon.fun" target="_blank">&copy; MorTnon</a></footer>
         </aside>
         <main>
             <header>
-                <a class="menuName">{{菜单名}}</a>
+                <a class="menuName">上传</a>
             </header>
 
-            <section>
-                <a style="color: #666666;">color2</a>
+            <section class="upload">
+                <div class="file has-name is-boxed">
+                    <label class="file-label">
+                        <input class="file-input" type="file" name="resume" multiple>
+                        <span class="file-cta">
+                            <i class="fa fa-cloud-upload"></i>
+                            <span>选择图片</span>
+                        </span>
+                    </label>
+                    <span class="file-names">
+                    </span>
+                </div>
+                <button class="button" id="uploadBtn" disabled="disabled">立即上传</button>
+            </section>
+            <section class="management">
+                <a style="color: #666666;">管理</a>
+            </section>
+            <section class="configuration">
+                <a style="color: #666666;">配置</a>
+            </section>
+            <section class="document">
+                <a style="color: #666666;">帮助</a>
             </section>
         </main>
     </div>

@@ -21,11 +21,15 @@ aside {
 }
 
 .menuIcon {
-  position:absolute;
+  position: absolute;
   top: 0;
   margin: 40px 0 0 4px;
   color: #FFF;
   visibility: hidden;
+}
+
+.menuIcon li {
+  padding: 4px 0;
 }
 
 .menuIcon li:hover {
@@ -39,11 +43,11 @@ aside {
   margin: 6px;
 }
 
-a:hover{
+a:hover {
   color: #0099cc;
 }
 
-.copyright > a {
+.copyright>a {
   color: #FFF;
   font-size: 15px;
   font-weight: 100;
@@ -58,20 +62,20 @@ a:hover{
   font-family: '微软雅黑', Trebuchet MS, Verdana, Helvetica, Arial, sans-serif;
 }
 
-.menu > ul,.menuIcon > ul {
-  list-style-type:none;
+.menu>ul, .menuIcon>ul {
+  list-style-type: none;
   padding-left: 0;
 }
 
-.menu ul > li {
+.menu ul>li {
   padding: 4px;
 }
 
-.menu li > i {
+.menu li>i {
   padding-right: 6px;
 }
 
-.menu li > a {
+.menu li>a {
   color: #FFF;
 }
 
@@ -80,12 +84,11 @@ a:hover{
   text-shadow: 4px 2px 2px #999999;
 }
 
-
-#menuVisible{
+#menuVisible {
   display: none;
 }
 
-#menuVisible:checked~aside{
+#menuVisible:checked~aside {
   display: none;
 }
 
@@ -94,14 +97,13 @@ a:hover{
   visibility: hidden;
 }
 
-#menuVisible:checked~.vText{
-  visibility:visible;
+#menuVisible:checked~.vText {
+  visibility: visible;
 }
 
-#menuVisible:checked~.menuIcon{
-  visibility:visible;
+#menuVisible:checked~.menuIcon {
+  visibility: visible;
 }
-
 
 .wrap {
   float: left;
@@ -120,7 +122,7 @@ a:hover{
   text-shadow: 0 -4px;
 }
 
-.wrap:hover{
+.wrap:hover {
   background-color: #0099cc;
   border-radius: 50px;
   cursor: pointer;
@@ -143,11 +145,76 @@ main>header {
   text-shadow: 5px 2px 2px lightgray;
 }
 
-.menuName:hover{
+.menuName:hover {
   color: #0099cc;
 }
 
 main>section {
   text-align: left;
   border: 1px solid red;
+}
+
+main>.management, main>.configuration, main>.document {
+  display: none;
+}
+
+main>section {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload>.file, .upload>.button {
+  margin: 10px;
+}
+
+.upload > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.file-names {
+  border-radius: 0 0 4px 4px;
+  border-width: 0 1px 1px;
+  border-color: #dbdbdb;
+  border-style: solid;
+}
+
+.file-names> span {
+  max-width: 16em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  white-space: nowrap;
+}
+
+.upload-file {
+  display: flex;
+  align-items: center;
+}
+
+.upload-file > p {
+  max-width: 16em;
+  min-width: 10em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.upload-file > button {
+  border: none;
+  background-color: #FFF;
+  margin: 2px 4px;
+  cursor: pointer;
+  padding: 0;
+  
+}
+
+.upload-file > button:hover {
+  cursor: pointer;
+  text-shadow: 2px 2px 2px #999999;
+
 }
